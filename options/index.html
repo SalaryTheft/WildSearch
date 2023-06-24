@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <style>
+        html {
+            user-select: none;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            html {
+                background-color: rgb(43, 42, 51);
+                color: rgb(255, 255, 255);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form id="options_form">
+        <label for="masterArm">Use Wild Search</label>
+        <input type="checkbox" name="masterArm" />
+        <label for="usePrimaryLanguage">Search English pages</label>
+        <input type="checkbox" name="usePrimaryLanguage" />
+    </form>
+    <script src="options.js"></script>
+</body>
+
+</html>

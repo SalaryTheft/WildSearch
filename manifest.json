@@ -1,0 +1,38 @@
+{
+    "manifest_version": 2,
+    "name": "Wild Search",
+    "version": "1.0",
+    "default_locale": "ko_KR",
+    "description": "__MSG_extensionDescription__",
+    "icons": {
+        "48": "icons/icon-48.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://www.google.com/search?*",
+                "*://www.google.co.kr/search?*"
+            ],
+            "js": [
+                "wildsearch.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "browser_action": {
+        "default_icon": "icons/icon-48.png",
+        "default_title": "Wild Search",
+        "default_popup": "options/index.html"
+    },
+    "options_ui": {
+        "page": "options/index.html"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "wildsearch@salarytheft.github"
+        }
+    }
+}
